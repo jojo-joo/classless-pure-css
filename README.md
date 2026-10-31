@@ -1,6 +1,6 @@
 # materia
 
-class-less css ui framework for resource constrained MCU.
+class-less css ui framework for resource constrained MCU. The code was extracted from Pure.css using AI.
 
 ## Goals
 
