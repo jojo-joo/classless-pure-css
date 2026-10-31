@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classless Capsule</title>
+  <link rel="stylesheet" href="classless.pure.css">
+
+  <style>
+    :where(body > :is(header, main, footer)) {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+
+        @media (min-width: 576px)  { width: min(100% - 32px, 540px); }
+        @media (min-width: 768px)  { width: min(100% - 48px, 720px); }
+        @media (min-width: 1024px) { width: min(50%, 2048px); }
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      column-gap: 16px;
+      row-gap: 8px;
+      align-items: center;
+    }
+
+    form>row {
+      display: contents;
+    }
+
+    form>row>label,
+    form>row>input,
+    form>row>select {
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    form>row>label {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: end;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h2>Form Elements</h2>
+    <form class="pure-form pure-form-aligned">
+      <row><label>Text</label><input type="text" id="text" placeholder="Text"></row>
+      <row><label>Select</label><select id="select" required>
+          <option value="" selected>Option 1</option>
+          <option>Option 2</option>
+        </select></row>
+      <row><label>Date</label><input type="date" id="date"></row>
+      <row><label>Time</label><input type="time" id="time"></row>
+      <row><label>File</label><input type="file" id="file"></row>
+      <row><label>Disabled</label><input type="text" id="disabled" placeholder="Disabled" disabled></row>
+      <row><label>Readonly</label><input type="text" id="readonly" placeholder="Readonly" readonly></row>
+      <row><label>Range Slider</label><input type="range" min="0" max="100" value="50" id="range"></row>
+      <row><label>Color Picker</label><input type="color" id="color" value="#0eaaaa"></row>
+      <row>
+        <label>Gender</label>
+        <fieldset>
+          <label><input type="radio" name="size" value="s">Male</label>
+          <label><input type="radio" name="size" value="m" checked>Female</label>
+        </fieldset>
+      </row>
+      <row>
+        <label>Hobbit</label>
+        <fieldset>
+          <label><input type="checkbox" name="size" value="a">Art</label>
+          <label><input type="checkbox" name="size" value="c" checked>Code</label>
+        </fieldset>
+      </row>
+      <row><label>Switch</label><input type="checkbox" id="switch-1" role="switch" checked></row>
+      <row><label></label><input type="reset" value="Default"></row>
+      <row><label></label><input type="submit" value="Submit"></row>
+    </form>
+  </main>
+</body>
+
+</html>
