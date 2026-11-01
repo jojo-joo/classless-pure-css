@@ -1,6 +1,7 @@
 # Classless Pure CSS
 
 Pure.css style, class-less css ui framework for resource constrained MCU. The code was extracted from Pure.css using AI.
+click [demo](https://jojo-joo.github.io/classless-pure-css/) to see online example.
 
 ## Goals
 
@@ -13,3 +14,5 @@ but concentrate on
 - modern style eg switch & theme
 - easy study
 
+## Showcase
+![alt text](assets/README/image.png)
